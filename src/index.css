@@ -78,13 +78,12 @@
 
 .marquee-content {
 	display: inline-flex;
-	animation: marqueeScroll 8s linear infinite;
+	animation: marqueeScroll 18s linear infinite;
 	will-change: transform;
+	-webkit-animation: marqueeScroll 18s linear infinite;
 }
 
 .marquee-image {
-	height: 80px;
-	width: auto;
 	object-fit: contain;
 	flex-shrink: 0;
 	display: block;

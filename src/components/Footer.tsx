@@ -8,7 +8,7 @@ const Footer = () => {
 							key={index}
 							src="/marquee1.svg"
 							alt="LinkedIn Course Banner"
-							className="marquee-image"
+							className="marquee-image h-8 md:h-auto w-[1000px] md:w-auto"
 						/>
 					))}
 				</div>

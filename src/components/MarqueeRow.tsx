@@ -18,7 +18,6 @@ const MarqueeRow: React.FC<MarqueeRowProps> = ({
 		<div className="w-full overflow-hidden">
 			<div className={marqueeClass}>
 				<div className={contentClass}>
-					{/* Render testimonials twice for continuous scroll */}
 					{[...Array(2)].map((_, setIndex) =>
 						testimonials.map((testimoni) => (
 							<TestimonialCard

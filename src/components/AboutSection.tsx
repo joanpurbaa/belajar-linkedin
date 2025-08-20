@@ -25,11 +25,11 @@ const AboutSection = () => {
 	return (
 		<section
 			id="tentang"
-			className="flex flex-col items-center bg-gradient-to-br from-[#0a66c2] to-blue-500 px-20 py-40 gap-10">
-			<h1 className="text-3xl font-bold text-white mb-10 text-center">
+			className="flex flex-col items-center bg-gradient-to-br from-[#0a66c2] to-blue-500 px-4 md:px-20 py-20 md:py-40 gap-6 md:gap-10">
+			<h1 className="text-2xl md:text-3xl font-bold text-white mb-5 md:mb-10 text-center leading-tight">
 				Pondasi lu harus kuasain LinkedIn in this economy?
 			</h1>
-			<div className="grid grid-cols-12 gap-10 w-full max-w-6xl">
+			<div className="grid grid-cols-12 gap-4 md:gap-10 w-full max-w-6xl">
 				{aboutData.map((item, index) => (
 					<AboutCard
 						key={index}
