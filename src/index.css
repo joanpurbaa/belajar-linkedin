@@ -15,3 +15,95 @@
 .bg3 {
 	background-image: url("/bg3.jpg");
 }
+
+.marquee-left,
+.marquee-right {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.marquee-content-left {
+	display: inline-flex;
+	animation: marqueeLeftToRight 25s linear infinite;
+	will-change: transform;
+}
+
+.marquee-content-right {
+	display: inline-flex;
+	animation: marqueeRightToLeft 30s linear infinite;
+	will-change: transform;
+}
+
+@keyframes marqueeLeftToRight {
+	0% {
+		transform: translateX(-50%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes marqueeRightToLeft {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.marquee-left:hover .marquee-content-left,
+.marquee-right:hover .marquee-content-right {
+	animation-play-state: paused;
+}
+
+.marquee-content-left,
+.marquee-content-right {
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+.marquee-content-left > div,
+.marquee-content-right > div {
+	white-space: normal;
+}
+
+.marquee-container {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	height: auto;
+}
+
+.marquee-content {
+	display: inline-flex;
+	animation: marqueeScroll 8s linear infinite;
+	will-change: transform;
+}
+
+.marquee-image {
+	height: 80px;
+	width: auto;
+	object-fit: contain;
+	flex-shrink: 0;
+	display: block;
+}
+
+@keyframes marqueeScroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.marquee-container:hover .marquee-content {
+	animation-play-state: paused;
+}
+
+.marquee-content {
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
